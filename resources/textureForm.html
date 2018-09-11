@@ -1,0 +1,86 @@
+<! doctype html>
+<html>
+    <head>
+        <title>
+            Texture Form    
+        </title>    
+    </head>
+    <style>
+        h1{
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;text-align: center;margin: 0 auto;
+        }
+        td:not(.container){
+            width: 100px;height: 100px;min-width: 100px;min-height: 100px;
+        }
+        .surface{
+            border: solid black; 
+        }
+        .container{
+            width: 400px; text-align: center;
+        }
+        #left{
+            transform-origin: center;transform: rotate(-90deg);
+        }
+        #right{
+            transform-origin: center;transform: rotate(90deg);
+        }
+        #top_back{
+            transform-origin: center;transform: rotate(180deg);
+        }
+    </style>
+    <body>
+        <h1>
+            Texture Form
+        </h1>
+        <p>
+            According to the vertex Array I set, if you don't want to adjust or rewrite the Texture Coordinate yourself, here is the Form of the Texture Image:
+        </p>
+        <p>
+            Basicly it requires a whole Image made of 2x3 square images as a matrix. Each of the square images is respectively a surface of the cube skybox.
+        </p>
+        <p>
+            If your textures are orientation-sensitive(in most situations of a whole Panorama Picture, yes) here's some points you may want to check:
+            
+            
+            
+        </p>
+        <table>
+            <tr>
+                <td class="container">  if your texture expends this way(shown below), every square is so oriented that you see the title text on it just correctly leveled when you are inside the skybox.</td>
+                <td></td>
+                <td class="container"> in this case, you should order your textures and orient them just like shown below, simply the direction you seen in the center of the skybox.</td>
+            </tr>
+            <tr>
+                <td class="container">
+        <table class="UVExpended">
+            <tr>
+                <td></td><td class="surface" id="top_back">Top</td><td></td>
+            </tr>            
+            <tr>
+                <td></td><td class="surface">Front</td><td></td>
+            </tr>
+            <tr>
+                <td class="surface" id="left">Left</td><td class="surface">Bottom</td><td class="surface" id="right">Right</td>
+            </tr>
+            <tr>
+                <td></td><td class="surface" id="top_back">Back</td><td></td>
+            </tr>
+        </table>
+                </td>
+                <td>
+                </td>
+                <td class="container">
+        <table>
+            <tr><td class="surface">Bottom</td><td class="surface">Back</td></tr>
+            <tr><td class="surface">Front</td><td class="surface">Left</td></tr>
+            <tr><td class="surface">Right</td><td class="surface">Top</td></tr>
+        </table>
+                </td></tr>
+            <tr><td class="container">expended</td><td></td><td class="container">formed</td></tr>
+        </table>
+        A sample can be found under the same directory titled "textures.png".
+    </body>
+</html>
