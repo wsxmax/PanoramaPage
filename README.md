@@ -5,6 +5,10 @@ this is a simple html page let you look around a panorama picture like in a skyb
 page requires a 2x3 matrix of textures of each suface of a cube formed in one single png.
 and render a cube in webgl context and set the camera in center of the whole world space.
 
+see live demo: https://wsxmax.github.io/PanoramaPage/
+
+ios13+ devices request https to allow gyroscope function
+
 the form of the texture is described in "TextureForm.pdf" under the resources directory alone with a sample.
 
 have to make clear, that I didnt write all the code myself of course,
